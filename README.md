@@ -1,16 +1,164 @@
-# React + Vite
+# React World — Countries Explorer & Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+**React World** is a modern React-based web application that allows users to explore countries across the globe and perform real-time currency conversions. The project combines API-driven data, dynamic routing, and interactive UI components to deliver a practical application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Countries Explorer
 
-## Expanding the ESLint configuration
+* Browse a list of countries with key details
+* View:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  * Official name
+  * Capital
+  * Region
+  * Population
+  * Currency Code
+  * Flag
+* Responsive grid layout using Tailwind CSS
+
+### Currency Converter
+
+* Convert between global currencies
+* Auto-detect base currency from selected country
+* Real-time conversion using external API
+* Swap currencies instantly (Need Modification)
+
+### Navigation
+
+* Click a country → opens converter with pre-selected currency
+* URL-based state using query parameters:
+
+  ```
+  /converter?from=usd
+  ```
+
+### State Management
+
+* Controlled inputs for real-time updates
+* Auto recalculation on:
+
+  * Amount change
+  * Currency change
+
+---
+
+## Tech Stack
+
+* **Frontend:** React (Hooks)
+* **Styling:** Tailwind CSS
+* **Routing:** React Router
+* **API:** Currency API (exchange rates)
+* **State Management:** useState, useEffect
+* **Custom Hooks:** useCurrencyInfo
+
+---
+
+## Project Structure
+
+```
+React-World/
+│
+├── components/
+│   ├── Country.jsx
+│   ├── Countries.jsx
+│   ├── CurrencyConverter.jsx
+│   ├── Input.jsx
+│
+├── hooks/
+│   ├── useCurrencyInfo.js
+│
+├── App.jsx
+├── main.jsx
+└── README.md
+```
+
+---
+
+## Installation & Setup
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/react-world.git
+cd react-world
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## Usage
+
+1. Browse countries on the homepage
+2. Click a country card
+3. Automatically navigate to converter
+4. Currency is pre-selected based on country
+5. Enter amount → get instant conversion
+
+---
+
+## Key Concepts Demonstrated
+
+* React component composition
+* Lifting state up
+* Custom hooks for API abstraction
+* Controlled components
+* Dynamic routing with query parameters
+* Conditional rendering
+* API integration & async data handling
+
+---
+
+## Known Limitations
+
+* Exchange rates may not be real-time (API dependent)
+* Some countries may have missing currency data
+* No caching implemented (can be optimized)
+
+---
+
+## Future Improvements
+* Cache API responses for performance
+* Dark/light theme toggle
+---
+
+## Screenshots 
+
+![Countries](./screenshots/project-demo.png)
+
+---
+
+## Live Demo
+
+👉 Try the app here:  
+https://gleeful-gumption-df8e12.netlify.app/
+
+## License
+
+This project is open-source and available under the MIT License.
+
+---
+
+## Author
+
+**Miraj**
+Aspiring Full-Stack Developer (MERN)
+
+
+
+
